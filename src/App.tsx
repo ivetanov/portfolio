@@ -166,26 +166,85 @@ const App = () => {
               aria-labelledby="skvadra-heading"
               className="flex flex-col lg:flex-row w-full justify-start items-start"
             >
-              <figure className="relative overflow-hidden h-120 md:h-150 lg:h-180 mt-0 lg:w-3/5 w-full max-w-lg mx-auto md:max-w-2xl lg:mx-0 bg-primary lg:order-1 order-2">
+              <figure
+                className="
+    relative
+    overflow-hidden
+    h-130 sm:h-140 md:h-150 lg:h-180
+    mt-0
+    w-full
+    max-w-lg
+    mx-auto
+    md:max-w-2xl
+    lg:mx-0
+    lg:w-3/5
+    bg-primary
+    order-2
+    lg:order-1
+  "
+              >
                 <TabletMockup
                   src={eshopHomePage}
                   alt="e-shop home page"
-                  className="absolute left-10 md:left-20 top-10 lg:top-20 w-60 lg:w-80 rotate-3 lg:-rotate-3"
+                  className="
+      absolute
+      left-1/2
+      top-8
+      w-56
+      -translate-x-1/2
+      rotate-3
+
+      sm:w-60
+      md:left-20
+      md:top-10
+      md:translate-x-0
+
+      lg:top-20
+      lg:w-80
+      lg:-rotate-3
+    "
                 />
+
                 <TabletMockup
                   src={brandsPage}
-                  alt="e-shop home page"
-                  className="absolute right-10 md:right-40 lg:right-20 top-60 w-60 rotate-4 hidden md:block"
+                  alt="e-shop brands page"
+                  className="
+      absolute
+      hidden
+      md:block
+      md:right-10
+      md:top-62
+      md:w-56
+      md:rotate-4
+
+      lg:right-20
+      lg:top-60
+      lg:w-60
+    "
                 />
-                <div className="uppercase absolute bottom-5 text-background left-5 flex flex-row gap-2 items-center">
+
+                <div
+                  className="
+      absolute
+      bottom-5
+      left-5
+      flex
+      flex-row
+      items-center
+      gap-2
+      uppercase
+      text-background
+    "
+                >
                   <div className="text-4xl font-normal text-center">50+</div>
+
                   <div className="w-30">{texts.projects.eshopImgTitle}</div>
                 </div>
 
                 <figcaption className="sr-only">
-                  Preview of the Skvadra mobile application
+                  Preview of the React e-shop
                 </figcaption>
-              </figure>
+              </figure>{" "}
               <div className="flex flex-col justify-between lg:pr-0 lg:flex-1 w-full h-fit lg:h-full lg:order-2">
                 <div className="lg:ml-10">
                   <p className="font-mono text-xs sm:text-sm tracking-widest text-primary uppercase mt-8 sm:mt-10">
