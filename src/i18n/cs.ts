@@ -65,7 +65,7 @@ export const cs = {
   experience: {
     header: "zkušenosti / nástroje",
     title: "co mohu nabídnout",
-    exp1date: "2024 - současnost",
+    exp1date: "2024 - nyní",
     exp1title: "Frontend vývojářka ve Wingbot.ai",
     exp1desc:
       "Pracuji na komerčních projektech a zároveň vyvíjím vlastní aplikace.",

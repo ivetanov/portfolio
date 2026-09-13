@@ -63,51 +63,66 @@ const App = () => {
             >
               {texts.projects.header}
             </p>
-            <h2 className="w-107.5 mb-16">
-              <span className="uppercase text-5xl">
+            <h2 className="w-fit lg:w-107.5 mb-16">
+              <span className="uppercase text-2xl md:text-5xl">
                 {texts.projects.title1}
               </span>
-              <span className="uppercase text-5xl text-muted-foreground">
+              <span className="uppercase text-2xl md:text-5xl text-muted-foreground">
                 {texts.projects.title2}
               </span>
             </h2>
-
             {/**Skvadra */}
             <article
               aria-labelledby="skvadra-heading"
               className="flex flex-col lg:flex-row w-full justify-start items-start border-t border-muted-foreground"
             >
               <div className="flex flex-col justify-between lg:pr-12 w-full lg:flex-1 h-full">
-                <div className="">
-                  <p className="font-mono text-sm tracking-widest text-primary uppercase mt-10">
+                <div>
+                  <p className="font-mono text-xs sm:text-sm tracking-widest text-primary uppercase mt-8 sm:mt-10">
                     {texts.projects.skvadraHeader}
                   </p>
 
                   <h3
                     id="skvadra-heading"
-                    className="mb-6 mt-10 lg:mt-16 text-6xl tracking-tight"
+                    className="
+        mb-6
+        mt-8 sm:mt-10 lg:mt-16
+        w-full min-w-0
+        tracking-tight
+        text-4xl sm:text-5xl lg:text-6xl
+        wrap-anywhere
+      "
                   >
                     Skvadra
                   </h3>
 
-                  <p className="max-w-lg ml-10 lg:ml-0 lg:max-w-sm text-muted-foreground">
+                  <p className="max-w-lg ml-0 sm:ml-6 lg:ml-0 lg:max-w-sm text-sm sm:text-base text-muted-foreground">
                     {texts.projects.skvadraDesc1}
                   </p>
 
-                  <p className="mt-6 max-w-lg ml-10 lg:ml-0 lg:max-w-sm text-muted-foreground">
+                  <p className="mt-5 sm:mt-6 max-w-lg ml-0 sm:ml-6 lg:ml-0 lg:max-w-sm text-sm sm:text-base text-muted-foreground">
                     {texts.projects.skvadraDesc2}
                   </p>
 
-                  <p className="mt-6 max-w-lg ml-10 lg:ml-0 lg:max-w-sm text-muted-foreground">
+                  <p className="mt-5 sm:mt-6 max-w-lg ml-0 sm:ml-6 lg:ml-0 lg:max-w-sm text-sm sm:text-base text-muted-foreground">
                     {texts.projects.skvadraDesc3}
                   </p>
 
-                  <div className="flex flex-row flex-wrap gap-6 mt-6 w-full justify-center lg:justify-start">
+                  <div className="flex flex-row flex-wrap gap-3 sm:gap-4 lg:gap-6 my-6 w-full justify-start lg:justify-start">
                     {skvadraStack.map((item, index) => {
                       return (
                         <div
                           key={index}
-                          className="h-fit border border-muted-foreground text-foreground font-mono text-center p-3 whitespace-nowrap"
+                          className="
+              h-fit
+              border border-muted-foreground
+              text-foreground
+              font-mono
+              text-center
+              p-2 sm:p-3
+              text-xs sm:text-sm
+              whitespace-nowrap
+            "
                         >
                           {item}
                         </div>
@@ -115,26 +130,7 @@ const App = () => {
                     })}
                   </div>
                 </div>
-                <div className="flex flex-row gap-10 mb-10 justify-center lg:justify-start">
-                  {/* <a
-                    href="#"
-                    className="mt-10 flex w-fit items-center gap-2 uppercase border-b border-primary pb-1 whitespace-nowrap"
-                    aria-label="View Skvadra project"
-                  >
-                    {texts.projects.viewButton}
-                    <MoveUpRight size={18} aria-hidden="true" color="#a8ff25" />
-                  </a>
-                  <a
-                    href="#"
-                    className="mt-10 flex w-fit items-center gap-2 uppercase border-b border-muted-foreground pb-1"
-                    aria-label="View github Skvadra repozitory"
-                  >
-                    GITHUB
-                    <MoveUpRight size={18} aria-hidden="true" color="#ececec" />
-                  </a> */}
-                </div>
               </div>
-
               <figure className="bg-accent-blue relative overflow-hidden h-150 lg:h-200 mt-0 max-w-lg mx-auto md:max-w-2xl lg:mx-0 w-full lg:w-3/5">
                 <PhoneMockup
                   src={createEventImage}
@@ -165,17 +161,16 @@ const App = () => {
                 </figcaption>
               </figure>
             </article>
-
             {/**React e-shop */}
             <article
               aria-labelledby="skvadra-heading"
               className="flex flex-col lg:flex-row w-full justify-start items-start"
             >
-              <figure className="relative overflow-hidden h-150 lg:h-180 mt-0 lg:w-3/5 w-full max-w-lg mx-auto md:max-w-2xl lg:mx-0 bg-primary lg:order-1 order-2">
+              <figure className="relative overflow-hidden h-120 md:h-150 lg:h-180 mt-0 lg:w-3/5 w-full max-w-lg mx-auto md:max-w-2xl lg:mx-0 bg-primary lg:order-1 order-2">
                 <TabletMockup
                   src={eshopHomePage}
                   alt="e-shop home page"
-                  className="absolute left-20 md:left-20 top-10 lg:top-20 w-80 rotate-3 lg:-rotate-3"
+                  className="absolute left-10 md:left-20 top-10 lg:top-20 w-60 lg:w-80 rotate-3 lg:-rotate-3"
                 />
                 <TabletMockup
                   src={brandsPage}
@@ -192,31 +187,47 @@ const App = () => {
                 </figcaption>
               </figure>
               <div className="flex flex-col justify-between lg:pr-0 lg:flex-1 w-full h-fit lg:h-full lg:order-2">
-                <div className="ml-10">
-                  <p className="font-mono text-sm tracking-widest text-primary uppercase mt-10">
+                <div className="lg:ml-10">
+                  <p className="font-mono text-xs sm:text-sm tracking-widest text-primary uppercase mt-8 sm:mt-10">
                     {texts.projects.eshopHeader}
                   </p>
 
                   <h3
                     id="skvadra-heading"
-                    className="mb-6 mt-10 lg:mt-16 text-6xl tracking-tight w-100 lg:w-full"
+                    className="
+        mb-6
+        mt-8 sm:mt-10 lg:mt-16
+        text-4xl sm:text-5xl lg:text-6xl
+        tracking-tight
+        w-full min-w-0
+      "
                   >
                     React e-shop
                   </h3>
 
-                  <p className="max-w-lg ml-10 lg:ml-0 lg:max-w-sm text-muted-foreground">
+                  <p className="max-w-lg ml-0 sm:ml-6 lg:ml-0 lg:max-w-sm text-sm sm:text-base text-muted-foreground">
                     {texts.projects.eshopDesc1}
                   </p>
-                  <p className="max-w-lg ml-10 lg:ml-0 lg:max-w-sm text-muted-foreground mt-6">
+
+                  <p className="max-w-lg ml-0 sm:ml-6 lg:ml-0 lg:max-w-sm text-sm sm:text-base text-muted-foreground mt-5 sm:mt-6">
                     {texts.projects.eshopDesc2}
                   </p>
 
-                  <div className="flex flex-row flex-wrap gap-6 mt-6 w-full justify-center lg:justify-start">
+                  <div className="flex flex-row flex-wrap gap-3 sm:gap-4 lg:gap-6 mt-6 w-full justify-start lg:justify-start">
                     {eshopStack.map((item, index) => {
                       return (
                         <div
                           key={index}
-                          className="h-fit border border-muted-foreground text-foreground font-mono text-center p-3 whitespace-nowrap"
+                          className="
+              h-fit
+              border border-muted-foreground
+              text-foreground
+              font-mono
+              text-center
+              p-2 sm:p-3
+              text-xs sm:text-sm
+              whitespace-nowrap
+            "
                         >
                           {item}
                         </div>
@@ -224,55 +235,55 @@ const App = () => {
                     })}
                   </div>
                 </div>
-                <div className="flex flex-row gap-10 mb-10 ml-10 justify-center lg:justify-start">
-                  {/* <a
-                    href="#"
-                    className="mt-10 flex w-fit items-center gap-2 uppercase border-b border-primary pb-1 whitespace-nowrap"
-                    aria-label="View React e-shop project"
-                  >
-                    {texts.projects.viewButton}
-                    <MoveUpRight size={18} aria-hidden="true" color="#a8ff25" />
-                  </a>
-                  <a
-                    href="#"
-                    className="mt-10 flex w-fit items-center gap-2 uppercase border-b border-muted-foreground pb-1"
-                    aria-label="Github project link"
-                  >
-                    GITHUB
-                    <MoveUpRight size={18} aria-hidden="true" color="#ececec" />
-                  </a> */}
-                </div>
-              </div>
-            </article>
 
+                <div className="flex flex-row gap-10 mb-10 ml-0 lg:ml-10 justify-start lg:justify-start">
+                  {/* links */}
+                </div>
+              </div>{" "}
+            </article>
             {/**Blog */}
             <article
-              aria-labelledby="skvadra-heading"
+              aria-labelledby="blog-heading"
               className="flex flex-col lg:flex-row w-full justify-start items-start lg:h-165"
             >
               <div className="flex flex-col justify-between lg:pr-12 w-full lg:flex-1 h-full lg:h-165">
-                <div className="">
-                  <p className="font-mono text-sm tracking-widest text-primary uppercase mt-10">
+                <div>
+                  <p className="font-mono text-xs sm:text-sm tracking-widest text-primary uppercase mt-8 sm:mt-10">
                     {texts.projects.blogHeader}
                   </p>
 
                   <h3
-                    id="skvadra-heading"
-                    className="mb-6 mt-10 lg:mt-16 text-6xl tracking-tight w-80"
+                    id="blog-heading"
+                    className="
+          mb-6
+          mt-8 sm:mt-10 lg:mt-16
+          text-4xl sm:text-5xl lg:text-6xl
+          tracking-tight
+          w-full min-w-0
+        "
                   >
                     AI meals
                   </h3>
 
-                  <p className="w-80 ml-10 lg:ml-0 lg:max-w-sm text-muted-foreground">
+                  <p className="max-w-lg ml-0 sm:ml-6 lg:ml-0 lg:max-w-sm text-sm sm:text-base text-muted-foreground">
                     {texts.projects.blogDesc1}
                   </p>
 
-                  <div className="flex flex-row flex-wrap gap-6 mt-16 w-full justify-center lg:justify-start">
+                  <div className="flex flex-row flex-wrap gap-3 sm:gap-4 lg:gap-6 mt-8 sm:mt-10 lg:mt-16 w-full justify-start">
                     {blogStack.map((item, index) => {
                       return (
                         <div
                           key={index}
-                          className="h-fit border border-muted-foreground text-foreground font-mono text-center p-3 whitespace-nowrap"
+                          className="
+                h-fit
+                border border-muted-foreground
+                text-foreground
+                font-mono
+                text-center
+                p-2 sm:p-3
+                text-xs sm:text-sm
+                whitespace-nowrap
+              "
                         >
                           {item}
                         </div>
@@ -280,19 +291,25 @@ const App = () => {
                     })}
                   </div>
                 </div>
-                <div className="flex flex-row gap-10 mb-10 justify-center lg:justify-start">
+
+                <div className="flex flex-row flex-wrap gap-6 sm:gap-10 mb-10 justify-start">
                   <a
                     href="https://mini-blog-manager.vercel.app/"
-                    className="mt-10 flex w-fit items-center gap-2 uppercase border-b border-primary pb-1 whitespace-nowrap"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 sm:mt-10 flex w-fit items-center gap-2 uppercase border-b border-primary pb-1 whitespace-nowrap"
                     aria-label="View blog project"
                   >
                     {texts.projects.viewButton}
                     <MoveUpRight size={18} aria-hidden="true" color="#a8ff25" />
                   </a>
+
                   <a
                     href="https://github.com/ivetanov/mini-blog-manager"
-                    className="mt-10 flex w-fit items-center gap-2 uppercase border-b border-muted-foreground pb-1"
-                    aria-label="View blog github repozitary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 sm:mt-10 flex w-fit items-center gap-2 uppercase border-b border-muted-foreground pb-1 whitespace-nowrap"
+                    aria-label="View blog GitHub repository"
                   >
                     GITHUB
                     <MoveUpRight size={18} aria-hidden="true" color="#ececec" />
@@ -300,20 +317,22 @@ const App = () => {
                 </div>
               </div>
 
-              <figure className="bg-accent-blue relative overflow-hidden h-110 lg:h-165 mt-0 max-w-lg mx-auto md:max-w-2xl lg:mx-0 w-full lg:w-3/5">
+              <figure className="bg-accent-blue relative overflow-hidden h-70 md:h-110 lg:h-165 mt-0 max-w-lg mx-auto md:max-w-2xl lg:mx-0 w-full lg:w-3/5">
                 <DesktopMockUp
                   src={blog}
                   alt="blog AI meals homepage"
-                  className="absolute bottom-20 lg:bottom-40 left-1/2 w-100 lg:w-130 -translate-x-1/2"
+                  className="absolute bottom-20 lg:bottom-40 left-1/2 w-60 md:w-100 lg:w-130 -translate-x-1/2"
                 />
+
                 <div className="uppercase absolute bottom-5 text-primary text-5xl lg:text-8xl lg:w-40 right-5 lg:right-5">
                   03
                 </div>
+
                 <figcaption className="sr-only">
-                  Preview of the Skvadra mobile application
+                  Preview of the AI Meals blog
                 </figcaption>
               </figure>
-            </article>
+            </article>{" "}
           </section>
 
           {/**Profile */}
@@ -330,7 +349,7 @@ const App = () => {
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-1/2 flex flex-col justify-between ">
                 <div>
-                  <h2 className="w-sm text-center lg:text-left lg:w-80 my-12 mx-auto lg:mx-0">
+                  <h2 className="w-fit text-center lg:text-left lg:w-80 my-12 mx-auto lg:mx-0">
                     <span className="uppercase text-2xl lg:text-6xl">
                       {texts.profile.title1}{" "}
                     </span>
@@ -338,19 +357,19 @@ const App = () => {
                       {texts.profile.title2}
                     </span>
                   </h2>
-                  <p className="mx-auto max-w-lg lg:max-w-md lg:w-fit lg:pr-6 text-muted-foreground mb-6 lg:ml-16 text-center lg:text-left">
+                  <p className="mx-auto max-w-lg lg:max-w-md lg:w-fit lg:pr-6 text-muted-foreground mb-6 lg:ml-0 text-center lg:text-left">
                     {texts.profile.desc1}
                   </p>
-                  <p className="mx-auto max-w-lg lg:max-w-md lg:w-fit lg:pr-6 text-muted-foreground mb-6 lg:ml-16 text-center lg:text-left">
+                  <p className="mx-auto max-w-lg lg:max-w-md lg:w-fit lg:pr-6 text-muted-foreground mb-6 lg:ml-0 text-center lg:text-left">
                     {texts.profile.desc2}
                   </p>
-                  <p className="mx-auto max-w-lg lg:max-w-md lg:w-fit lg:pr-6 text-muted-foreground mb-6 lg:ml-16 text-center lg:text-left">
+                  <p className="mx-auto max-w-lg lg:max-w-md lg:w-fit lg:pr-6 text-muted-foreground mb-6 lg:ml-0 text-center lg:text-left">
                     {texts.profile.desc3}
                   </p>
                 </div>
                 <a
                   href="#"
-                  className="mb-10 lg:mb-0 mt-10 flex w-fit items-center gap-2 uppercase border-b border-primary pb-1 mx-auto lg:ml-16"
+                  className="mb-10 lg:mb-0 mt-10 flex w-fit items-center gap-2 uppercase border-b border-primary pb-1 mx-auto lg:ml-0"
                   aria-label="Download resume"
                 >
                   {texts.profile.resumeText}
@@ -567,7 +586,7 @@ const App = () => {
 
               <a
                 href="mailto:novaiv.ivet@gmail.com"
-                className="bg-primary px-10 py-6 font-mono uppercase text-background transition-opacity hover:opacity-80"
+                className="bg-primary px-10 py-6 font-mono uppercase text-background transition-opacity hover:opacity-80 whitespace-nowrap"
               >
                 {texts.contact.getInTouch} →
               </a>
