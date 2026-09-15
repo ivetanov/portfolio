@@ -18,7 +18,7 @@ import { DesktopMockUp } from "./components/DesktopMockUp";
 import { useLanguage } from "./i18n/useLanguage";
 
 const App = () => {
-  const { texts } = useLanguage();
+  const { texts, language } = useLanguage();
 
   const skvadraStack = ["React Native", "Firebase", "Typescript"];
   const eshopStack = ["React", "Firebase", "Tailwind", "AI images"];
@@ -427,9 +427,22 @@ const App = () => {
                   </p>
                 </div>
                 <a
-                  href="#"
+                  href={
+                    language === "cs"
+                      ? "/documents/Iveta-Novakova-CV-CZ.pdf"
+                      : "/documents/Iveta-Novakova-CV-EN.pdf"
+                  }
+                  download={
+                    language === "cs"
+                      ? "Iveta-Novakova-CV.pdf"
+                      : "Iveta-Novakova-EN.pdf"
+                  }
                   className="mb-10 lg:mb-0 mt-10 flex w-fit items-center gap-2 uppercase border-b border-primary pb-1 mx-auto lg:ml-0"
-                  aria-label="Download resume"
+                  aria-label={
+                    language === "cs"
+                      ? "Stáhnout životopis v češtině"
+                      : "Download resume in English"
+                  }
                 >
                   {texts.profile.resumeText}
                   <MoveUpRight size={18} aria-hidden="true" color="#a8ff25" />
