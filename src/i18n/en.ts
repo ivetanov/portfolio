@@ -82,7 +82,7 @@ export const en: Translations = {
   },
   contact: {
     title: "LET'S MAKE SOMETHING USEFUL.",
-    subtitle: "Open to freelance collaborations and new job opportunities.",
+    subtitle: "Open to freelance collaborations.",
     getInTouch: "get in touch"
   },
 };

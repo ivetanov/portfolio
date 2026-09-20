@@ -80,7 +80,7 @@ export const cs = {
   },
   contact: {
     title: "Ozvěte se ohledně spolupráce.",
-    subtitle: "Jsem otevřená novým spolupracím a pracovním nabídkám.",
+    subtitle: "Jsem otevřená novým spolupracím.",
     getInTouch: "poslat mi zprávu",
   },
 };
